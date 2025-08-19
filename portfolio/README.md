@@ -8,15 +8,22 @@ This is a simple portfolio website built using HTML and CSS. The project aims to
 - Showcase of selected projects
 - Contact information
 
+## Structure
+
+- `index.html` — main page file
+- `src/style.css` — styles
+
+## How to Run
+
+1. Install dependencies: `npm install`
+2. Start the project: `npm run dev`
+
 ## Technologies
 
 - HTML5
 - CSS3
 
 ## How to Run
-
-1. Clone the repository to your local machine.
-2. Open the `index.html` file in any web browser.
 
 ## Contact
 

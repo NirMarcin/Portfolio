@@ -14,7 +14,8 @@ body {
 }
 
 .vintage-card {
-  max-width: 900px;
+  max-width: 1200px;
+  width: 80vw;
   margin: 3rem auto;
   background: #f8f1e3;
   border: 2px solid #b89b6c;
@@ -24,7 +25,7 @@ body {
   position: relative;
   z-index: 1;
 }
-
+/* Hero Section Start */
 .hero-section {
   display: flex;
   align-items: center;
@@ -69,7 +70,6 @@ body {
 
 .card-photo {
   flex: 0 0 240px;
-  margin: 0;
   border: 3px solid #b89b6c;
   border-radius: 12px;
   overflow: hidden;
@@ -92,7 +92,18 @@ body {
   border-top: 2px dashed #b89b6c;
   margin: 1.5rem 0;
 }
+/* Hero Section End */
 
+/* Main Section Start*/
+.main-sections {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.left-column,
+.right-column {
+  flex: 1 1 0;
+}
 .card-section {
   margin-bottom: 1.5rem;
 }
@@ -102,113 +113,14 @@ body {
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
-.card-section p,
-.card-section ul {
-  font-size: 1rem;
-  color: #5a3e1b;
-}
-.project-list {
-  list-style: square inside;
-  padding-left: 0.5rem;
-}
-.project-list li {
-  margin-bottom: 0.7rem;
-  background: rgba(184, 155, 108, 0.07);
-  border-left: 3px solid #b89b6c;
-  padding-left: 0.5rem;
-}
-
-.card-footer {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #a88c5c;
-  margin-top: 1.2rem;
-}
-
-/* Umiejętności - paski */
-.skills {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-}
-
-.skill-bar {
-  background: #333;
-  border-radius: 20px;
-  height: 24px;
-  margin-bottom: 1rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-bar::before {
-  content: attr(data-skill);
-  position: absolute;
-  left: 10px;
-  top: 3px;
-  color: #ddd;
-  font-weight: 600;
-  z-index: 2;
-}
-
-.skill-bar::after {
-  content: attr(data-level);
-  position: absolute;
-  right: 10px;
-  top: 3px;
-  color: #ddd;
-  font-weight: 600;
-  z-index: 2;
-}
-
-.skill-bar > div {
-  height: 100%;
-  background: #00bfa6;
-  border-radius: 20px 0 0 20px;
-  width: 0;
-  animation: fillSkill 2s forwards;
-}
-
-@keyframes fillSkill {
-  to {
-    width: var(--skill-level);
-  }
-}
-
-/* Kontakt */
-.contact {
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-bottom: 3rem;
-}
-
-/* Stopka */
-.footer {
-  text-align: center;
-  padding: 1rem;
-  background: #111;
-  color: #888;
-  font-size: 0.9rem;
-}
-
-.main-sections {
-  display: flex;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.left-column,
-.right-column {
-  flex: 1 1 0;
-}
-
-.my-skills {
-  margin-top: 2rem;
-}
 
 .skills-list {
   list-style: none;
   padding-left: 0;
+}
+
+.my-skills {
+  margin-top: 2rem;
 }
 
 .skills-list li {
@@ -221,9 +133,10 @@ body {
   box-shadow: 0 1px 4px rgba(90, 62, 27, 0.06);
 }
 
+/* Gallery */
 .project-gallery {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
@@ -260,6 +173,21 @@ body {
   font-weight: 600;
 }
 
+/* Contact */
+.contact {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 3rem;
+}
+
+/* Footer */
+.card-footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #a88c5c;
+  margin-top: 1.2rem;
+}
+
 /* Responsywność */
 @media (max-width: 768px) {
   .navbar ul {
@@ -275,7 +203,7 @@ body {
     font-size: 1.2rem;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 742px) {
   .vintage-card {
     padding: 1.2rem 0.5rem;
   }
@@ -286,7 +214,7 @@ body {
     display: none;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 802px) {
   .hero-section {
     padding: 1.2rem 0.5rem 1rem 0.5rem;
   }

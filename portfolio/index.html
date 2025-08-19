@@ -2,43 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="/src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body>
-    <header>
-      <h1>Marcin Nir</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="about">
+    <div class="vintage-card">
+      <header class="card-header">
+        <h1>Marcin Nir</h1>
+        <p class="subtitle">Frontend Developer</p>
+      </header>
+      <hr class="divider" />
+      <section class="card-section">
         <h2>About Me</h2>
-        <p>Short description about yourself, your skills and experience.</p>
+        <p>
+          Passionate frontend developer with experience in creating responsive and visually appealing websites. I love crafting clean and functional UIs.
+        </p>
       </section>
-      <section id="projects">
+      <section class="card-section">
         <h2>Projects</h2>
-        <div class="projects-list">
-          <!-- Example project -->
-          <div class="project">
-            <h3>Project Title</h3>
-            <p>Brief description of the project.</p>
-          </div>
-        </div>
+        <ul class="project-list">
+          <li>
+            <strong>Online Store</strong><br />
+            Responsive shop with cart and product filtering.
+          </li>
+          <li>
+            <strong>Weather App</strong><br />
+            Fetches weather from API, user geolocation.
+          </li>
+        </ul>
       </section>
-      <section id="contact">
+      <section class="card-section">
         <h2>Contact</h2>
         <p>Email: itmarcinnir@gmail.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/marcin-nir-31b61a252">Marcin Nir</a></p>
       </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 Marcin Nir. All rights reserved.</p>
-    </footer>
+      <hr class="divider" />
+      <footer class="card-footer">
+        <p>&copy; 2025 Marcin Nir</p>
+      </footer>
+    </div>
+  </body>
   </body>
 </html>
